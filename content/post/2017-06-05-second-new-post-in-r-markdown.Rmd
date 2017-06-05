@@ -1,0 +1,28 @@
+---
+title: Second New Post (in R Markdown)
+author: ~
+date: '2017-06-05'
+slug: second-new-post-in-r-markdown
+categories: []
+tags: []
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(ggplot2)
+```
+
+# Second New Post (R Markdown)
+
+This is my second post but my first R Markdown. 
+
+# mtCars Data Analysis
+
+This plot shows the relation between Horsepower and Miles per Gallon. The number of cylinders in the car is denoted by color. As you can see, there is a significant downward trend. As the amount of horsepower and the number of cylinders go down, the number of miles to the gallon goes up.
+
+```{r cars, echo=FALSE}
+ggplot(data = mtcars, aes(x = mpg, y = hp, color = cyl)) + 
+  geom_point() +
+  labs(x = "MPG", y = "Horsepower")
+```
+
+# Iris Data Analysis
